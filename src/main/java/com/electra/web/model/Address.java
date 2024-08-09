@@ -14,6 +14,6 @@ public class Address {
     private String city;
     private String state;
     private String country;
-    private long postalCode;
+    private Long postalCode;
 }
 

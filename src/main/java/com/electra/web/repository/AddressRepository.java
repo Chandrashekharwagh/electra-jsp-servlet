@@ -5,10 +5,19 @@ import com.electra.web.model.Address;
 import com.electra.web.service.ConnectionService;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class AddressRepository {
+
+    public AddressRepository() {
+        try {
+            // Assuming you're using MySQL
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/electra", "root", "chandu@2323");
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     private static Connection connection = null;
 
@@ -17,6 +26,7 @@ public class AddressRepository {
             connection = new ConnectionService().getConnection();
         }
     }
+
     public boolean insertAddress(Address address) throws SQLException {
         this.initConnection();
 
@@ -41,40 +51,4 @@ public class AddressRepository {
         return false;
     }
 
-    public List<Address> retrieveAddress() throws SQLException {
-        this.initConnection();
-        List<Address> addresses = new ArrayList<>();
-        try {
-            this.initConnection();
-            // Your database operations here...
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM address");
-
-            // Iterate over the result set
-            while (resultSet.next()) {
-                Long id = resultSet.getLong("id");
-                String street = resultSet.getString("street");
-                String city = resultSet.getString("city");
-                String state = resultSet.getString("state");
-                String country = resultSet.getString("country");
-                Long postalCode = resultSet.getLong( "postal_code");
-
-                Address address = new Address(id,street,state,city,country,postalCode);
-                addresses.add(address);
-
-            }
-        } catch (SQLException e) {
-            System.err.println("SQL error: " + e.getMessage());
-        } finally {
-            // Close the connection when done
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    System.err.println("Error closing connection: " + e.getMessage());
-                }
-            }
-        }
-        return addresses;
-    }
 }

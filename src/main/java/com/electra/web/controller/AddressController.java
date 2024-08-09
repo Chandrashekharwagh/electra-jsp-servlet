@@ -1,15 +1,20 @@
 package com.electra.web.controller;
 
+import com.electra.web.model.Address;
+import com.electra.web.service.AddressService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-
+import java.io.PrintWriter;
+import java.sql.SQLException;
 
 
 public class AddressController extends HttpServlet {
+
+    private final AddressService addressService =new AddressService();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -20,17 +25,37 @@ public class AddressController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        String id = request.getParameter("id");
         String street = request.getParameter("street");
         String city = request.getParameter("city");
         String state = request.getParameter("state");
         String country = request.getParameter("country");
         String postalCode = request.getParameter("postal_code");
 
-        request.setAttribute("street", street);
-        request.setAttribute("city", city);
-        request.setAttribute("state", state);
-        request.setAttribute("country", country);
-        request.setAttribute("postal_code", postalCode);
+        Address address = new Address();
+        address.setId((long) Integer.parseInt(id));
+        address.setCity(street);
+        address.setCity(city);
+        address.setState(state);
+        address.setCountry(country);
+        address.setPostalCode((long) Integer.parseInt(postalCode));
+
+
+        try {
+            boolean isInserted = addressService.insertAddress(address);
+            response.setContentType("text/html");
+            PrintWriter out = response.getWriter();
+            out.println("<html><body>");
+            if (isInserted) {
+                out.println("<h1> Address object inserted to db</h1>");
+            } else {
+                out.println("<h1> Address object in NOT inserted to db</h1>");
+            }
+            out.println("</body></html>");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
         request.getRequestDispatcher("confirmation.jsp").forward(request, response);
     }

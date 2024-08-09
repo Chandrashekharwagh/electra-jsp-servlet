@@ -11,6 +11,12 @@
         <div class="form-container">
             <h2>Address Form</h2>
             <form action="/electra/addressController" method="POST">
+
+            <div class="form-group">
+                <label for="id">Id:</label>
+                 <input type="text" class="form-control" id="id" name="id" required>
+             </div>
+
                 <div class="form-group">
                     <label for="street">Street:</label>
                     <input type="text" class="form-control" id="street" name="street" required>
