@@ -35,7 +35,7 @@ public class AddressController extends HttpServlet {
 
         Address address = new Address();
         address.setId((long) Integer.parseInt(id));
-        address.setCity(street);
+        address.setStreet(street);
         address.setCity(city);
         address.setState(state);
         address.setCountry(country);
