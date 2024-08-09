@@ -9,12 +9,12 @@
 
   <!-- Address Form Servlet -->
   <servlet>
-    <servlet-name>AddressController</servlet-name>
+    <servlet-name>addressController</servlet-name>
     <servlet-class>com.electra.web.controller.AddressController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>AddressController</servlet-name>
-    <url-pattern>/address</url-pattern>
+    <servlet-name>addressController</servlet-name>
+    <url-pattern>/addressController</url-pattern>
   </servlet-mapping>
 
   <!-- Brand Form Servlet -->
@@ -64,7 +64,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>OrderController</servlet-name>
-    <url-pattern>/orders</url-pattern>
+    <url-pattern>/order</url-pattern>
   </servlet-mapping>
 
   <!-- Payment Form Servlet -->

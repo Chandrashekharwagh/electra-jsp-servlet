@@ -10,7 +10,7 @@
     <div class="container">
         <div class="form-container">
             <h2>Address Form</h2>
-            <form action="/ElectraJspServlet/AddressController" method="POST">
+            <form action="/electra/addressController" method="POST">
                 <div class="form-group">
                     <label for="street">Street:</label>
                     <input type="text" class="form-control" id="street" name="street" required>

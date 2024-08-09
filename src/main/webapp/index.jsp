@@ -25,7 +25,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Brand Form</h5>
                         <p class="card-text">Manage brand details.</p>
-                        <a href="brand_form.jsp" class="btn btn-primary">Go to Brand Form</a>
+                        <a href="BrandForm.jsp" class="btn btn-primary">Go to Brand Form</a>
                     </div>
                 </div>
             </div>
