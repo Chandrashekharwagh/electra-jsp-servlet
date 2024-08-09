@@ -8,17 +8,6 @@ import java.sql.*;
 
 public class AddressRepository {
 
-    public AddressRepository() {
-        try {
-            // Assuming you're using MySQL
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/electra", "root", "chandu@2323");
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-
     private static Connection connection = null;
 
     private void initConnection() throws SQLException {
