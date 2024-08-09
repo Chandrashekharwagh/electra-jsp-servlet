@@ -19,62 +19,62 @@
 
   <!-- Brand Form Servlet -->
   <servlet>
-    <servlet-name>BrandController</servlet-name>
+    <servlet-name>brandController</servlet-name>
     <servlet-class>com.electra.web.controller.BrandController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>BrandController</servlet-name>
-    <url-pattern>/brand</url-pattern>
+    <servlet-name>brandController</servlet-name>
+    <url-pattern>/brandController</url-pattern>
   </servlet-mapping>
 
   <!-- Supplier Form Servlet -->
   <servlet>
-    <servlet-name>SupplierController</servlet-name>
+    <servlet-name>supplierController</servlet-name>
     <servlet-class>com.electra.web.controller.SupplierController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>SupplierController</servlet-name>
-    <url-pattern>/supplier</url-pattern>
+    <servlet-name>supplierController</servlet-name>
+    <url-pattern>/supplierController</url-pattern>
   </servlet-mapping>
 
   <!-- Product Form Servlet -->
   <servlet>
-    <servlet-name>ProductController</servlet-name>
+    <servlet-name>productController</servlet-name>
     <servlet-class>com.electra.web.controller.ProductController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>ProductController</servlet-name>
-    <url-pattern>/product</url-pattern>
+    <servlet-name>productController</servlet-name>
+    <url-pattern>/productController</url-pattern>
   </servlet-mapping>
 
   <!-- Customer Form Servlet -->
   <servlet>
-    <servlet-name>CustomerController</servlet-name>
+    <servlet-name>customerController</servlet-name>
     <servlet-class>com.electra.web.controller.CustomerController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>CustomerController</servlet-name>
-    <url-pattern>/customer</url-pattern>
+    <servlet-name>customerController</servlet-name>
+    <url-pattern>/customerController</url-pattern>
   </servlet-mapping>
 
   <!-- Order Form Servlet -->
   <servlet>
-    <servlet-name>OrderController</servlet-name>
+    <servlet-name>orderController</servlet-name>
     <servlet-class>com.electra.web.controller.OrderController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>OrderController</servlet-name>
-    <url-pattern>/order</url-pattern>
+    <servlet-name>orderController</servlet-name>
+    <url-pattern>/orderController</url-pattern>
   </servlet-mapping>
 
   <!-- Payment Form Servlet -->
   <servlet>
-    <servlet-name>PaymentController</servlet-name>
+    <servlet-name>paymentController</servlet-name>
     <servlet-class>com.electra.web.controller.PaymentController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>PaymentController</servlet-name>
-    <url-pattern>/payment</url-pattern>
+    <servlet-name>paymentController</servlet-name>
+    <url-pattern>/paymentController</url-pattern>
   </servlet-mapping>
 
   <!-- Welcome to file -->
