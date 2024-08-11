@@ -3,7 +3,6 @@ package com.electra.web.repository;
 
 import com.electra.web.model.Address;
 import com.electra.web.service.ConnectionService;
-
 import java.sql.*;
 
 public class AddressRepository {
