@@ -15,7 +15,7 @@ public class BrandRepository {
         try {
             // Assuming you're using MySQL
             Class.forName("com.mysql.cj.jdbc.Driver");
-            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/your_database", "username", "password");
+            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/electra", "root", "chandu@2323");
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
