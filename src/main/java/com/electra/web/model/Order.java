@@ -1,6 +1,7 @@
 package com.electra.web.model;
 
-import java.util.Date;
+
+import java.time.LocalDate;
 import lombok.*;
 
 @Getter
@@ -13,5 +14,5 @@ public class Order {
     private Long id;
     private int productId;
     private int customerId;
-    private Date orderDate;
+    private LocalDate orderDate;
 }

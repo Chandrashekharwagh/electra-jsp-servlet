@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Index Page</title>
+    <title>Index Form</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -70,16 +70,7 @@
                             </div>
                         </div>
             <!-- Add more cards as necessary -->
-            <div class="col-md-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Supplier Form</h5>
-                                    <p class="card-text">Manage Supplier details.</p>
-                                    <a href="SupplierForm.jsp" class="btn btn-primary">Go to Supplier Form</a>
-                                </div>
-                            </div>
-                        </div>
-            <!-- Add more cards as necessary -->
+
         </div>
     </div>
 </body>

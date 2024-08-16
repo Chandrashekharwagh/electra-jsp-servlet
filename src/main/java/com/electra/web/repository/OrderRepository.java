@@ -26,13 +26,13 @@ public class OrderRepository {
     public boolean insertOrder(Order order) throws SQLException {
         this.initConnection();
 
-        String query = "INSERT INTO order VALUES (?, ?, ?, ?)";
+        String query = "INSERT INTO orders VALUES (?, ?, ?, ?)";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             preparedStatement.setLong(1, order.getId());
             preparedStatement.setInt(2, order.getProductId());
             preparedStatement.setInt(3, order.getCustomerId());
-            preparedStatement.setDate(3, (Date) order.getOrderDate());
+            preparedStatement.setDate(4 , Date.valueOf(order.getOrderDate()));
 
             System.out.println("inserting order object to order table: " + order);
 

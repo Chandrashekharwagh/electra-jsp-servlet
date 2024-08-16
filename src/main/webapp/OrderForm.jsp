@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Orders Form</title>
+    <title>Order Form</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -13,19 +13,19 @@
             <form action="/electra/orderController" method="POST">
                 <div class="form-group">
                     <label for="id">Order ID:</label>
-                    <input type="id" class="form-control" id="id" name="id" required>
+                    <input type="text" class="form-control" id="id" name="id" required>
                 </div>
                 <div class="form-group">
                     <label for="product_id">Product ID:</label>
-                    <input type="number" class="form-control" id="product_id" name="product_id" required>
+                    <input type="text" class="form-control" id="product_id" name="product_id" required>
                 </div>
                 <div class="form-group">
                     <label for="customer_id">Customer ID:</label>
-                    <input type="number" class="form-control" id="customer_id" name="customer_id" required>
+                    <input type="text" class="form-control" id="customer_id" name="customer_id" required>
                 </div>
                 <div class="form-group">
-                    <label for="order_date">Order Date:</label>
-                    <input type="date" class="form-control" id="order_date" name="order_date" required>
+                    <label for="order_date">Order Date:</label> <!-- Changed 'localDate' to 'order_date' -->
+                    <input type="text" class="form-control" id="order_date" name="order_date" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

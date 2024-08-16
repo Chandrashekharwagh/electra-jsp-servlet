@@ -1,6 +1,6 @@
 package com.electra.web.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 import lombok.*;
 
 @Getter
@@ -12,7 +12,7 @@ import lombok.*;
 public class Payment{
     private Long id;
     private Double amount;
-    private Date paymentDate;
+    private LocalDate paymentDate;
     private Long customerId;
     private Long orderId;
 }

@@ -11,8 +11,10 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
-import java.time.Instant;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+
 
 public class OrderController extends HttpServlet {
     private final OrderService orderService = new OrderService();
@@ -37,8 +39,18 @@ public class OrderController extends HttpServlet {
         order.setId((long) Integer.parseInt(id));
         order.setProductId(Integer.parseInt(productId));
         order.setCustomerId(Integer.parseInt(customerId));
-        order.setOrderDate(Date.from(Instant.parse(orderDate)));
 
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yy-MM-dd");
+
+        try {
+            // Parse the orderDate using the formatter
+            LocalDate localDate = LocalDate.parse(orderDate, formatter);
+            order.setOrderDate(localDate);
+        } catch (DateTimeParseException e) {
+            // Handle the exception if the date cannot be parsed
+            e.printStackTrace();
+            // You might want to send an error response or set a default date
+        }
 
 
         try {
