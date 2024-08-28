@@ -1,4 +1,3 @@
-Certainly. I'll expand on the intro with more details and sections. Here's a more comprehensive README for my GitHub repository:
 
 # Electra-jsp-servlet
 
